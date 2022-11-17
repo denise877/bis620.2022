@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -21,8 +20,26 @@ You can install the development version of bis620.2022 from
 ``` r
  #install.packages("devtools")
 devtools::install_github("denise877/bis620.2022")
-#> Skipping install of 'bis620.2022' from a github remote, the SHA1 (3e2a68be) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo denise877/bis620.2022@HEAD
+#> vctrs   (0.5.0 -> 0.5.1) [CRAN]
+#> ggplot2 (3.3.6 -> 3.4.0) [CRAN]
+#> Installing 2 packages: vctrs, ggplot2
+#> 
+#>   There is a binary version available but the source version is later:
+#>       binary source needs_compilation
+#> vctrs  0.5.0  0.5.1              TRUE
+#> 
+#> 
+#> The downloaded binary packages are in
+#>  /var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T//RtmpbzsvZs/downloaded_packages
+#> installing the source package 'vctrs'
+#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/RtmpbzsvZs/remotes72ba114136ef/denise877-bis620.2022-9717f08/DESCRIPTION’ ... OK
+#> * preparing ‘bis620.2022’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * looking to see if a ‘data/datalist’ file should be added
+#> * building ‘bis620.2022_0.1.0.tar.gz’
 ```
 
 ## Example
@@ -60,10 +77,3 @@ You can also embed plots, for example:
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.
-=======
-# bis620.2022
-
-<!-- badges: start -->
-  [![R-CMD-check](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
->>>>>>> 3e2a68be103a9335d95baa0ecf787dda008c9aa0

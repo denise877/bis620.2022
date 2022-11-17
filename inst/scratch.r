@@ -23,4 +23,3 @@ ukb_accel |>
   spectral_signature(take_log = FALSE) |>
  # filter(freq <= 10) |>
   accel_plot()
-
