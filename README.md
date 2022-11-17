@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -59,3 +60,10 @@ You can also embed plots, for example:
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.
+=======
+# bis620.2022
+
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
+>>>>>>> 3e2a68be103a9335d95baa0ecf787dda008c9aa0
