@@ -21,19 +21,8 @@ You can install the development version of bis620.2022 from
  #install.packages("devtools")
 devtools::install_github("denise877/bis620.2022")
 #> Downloading GitHub repo denise877/bis620.2022@HEAD
-#> vctrs   (0.5.0 -> 0.5.1) [CRAN]
-#> ggplot2 (3.3.6 -> 3.4.0) [CRAN]
-#> Installing 2 packages: vctrs, ggplot2
 #> 
-#>   There is a binary version available but the source version is later:
-#>       binary source needs_compilation
-#> vctrs  0.5.0  0.5.1              TRUE
-#> 
-#> 
-#> The downloaded binary packages are in
-#>  /var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T//RtmpbzsvZs/downloaded_packages
-#> installing the source package 'vctrs'
-#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/RtmpbzsvZs/remotes72ba114136ef/denise877-bis620.2022-9717f08/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/RtmpfYKZr0/remotes7fed6c00ba18/denise877-bis620.2022-eeecf48/DESCRIPTION’ ... OK
 #> * preparing ‘bis620.2022’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
@@ -49,31 +38,70 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(bis620.2022)
 ## basic example code
+
+#use data ukb_accel as an example
+data("ukb_accel")
+
+#The spectral signature is calculated by taking the modulus of the Fourier coefficients of the signal.
+spec_sig(ukb_accel[1:100, ])
+#> # A tibble: 50 × 4
+#>         X     Y       Z  freq
+#>     <dbl> <dbl>   <dbl> <dbl>
+#>  1 19.8   33.7  103.     1.01
+#>  2 26.0    4.23   4.18   1.03
+#>  3  8.14   4.23   9.58   1.05
+#>  4  7.50   3.91   4.86   1.08
+#>  5  1.55   2.74   2.73   1.10
+#>  6  4.32   2.09   0.820  1.12
+#>  7  2.61   2.62   2.85   1.15
+#>  8  3.87   2.88   2.55   1.18
+#>  9  3.63   2.90   0.237  1.20
+#> 10  0.862  2.60   2.82   1.23
+#> # … with 40 more rows
+
+#take_log indicates whether the log of the modulus be taken 
+spec_sig(ukb_accel[1:100, ], take_log = TRUE)
+#> # A tibble: 50 × 4
+#>         X     Y      Z  freq
+#>     <dbl> <dbl>  <dbl> <dbl>
+#>  1  2.98  3.52   4.64   1.01
+#>  2  3.26  1.44   1.43   1.03
+#>  3  2.10  1.44   2.26   1.05
+#>  4  2.01  1.36   1.58   1.08
+#>  5  0.438 1.01   1.01   1.10
+#>  6  1.46  0.737 -0.199  1.12
+#>  7  0.961 0.962  1.05   1.15
+#>  8  1.35  1.06   0.935  1.18
+#>  9  1.29  1.06  -1.44   1.20
+#> 10 -0.148 0.957  1.04   1.23
+#> # … with 40 more rows
+
+#inverse indicates whether the unnormalized inverse transform is computed.
+spec_sig(ukb_accel[1:100, ], inverse = FALSE)
+#> # A tibble: 50 × 4
+#>         X     Y       Z  freq
+#>     <dbl> <dbl>   <dbl> <dbl>
+#>  1 19.8   33.7  103.     1.01
+#>  2 26.0    4.23   4.18   1.03
+#>  3  8.14   4.23   9.58   1.05
+#>  4  7.50   3.91   4.86   1.08
+#>  5  1.55   2.74   2.73   1.10
+#>  6  4.32   2.09   0.820  1.12
+#>  7  2.61   2.62   2.85   1.15
+#>  8  3.87   2.88   2.55   1.18
+#>  9  3.63   2.90   0.237  1.20
+#> 10  0.862  2.60   2.82   1.23
+#> # … with 40 more rows
+
+#plots UKBiobank accelerometry data
+accel_plot(ukb_accel[1:100, ])
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+#plot frequency data
+accel_plot(spec_sig(ukb_accel[1:100, ]))
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-example-2.png" width="100%" />
