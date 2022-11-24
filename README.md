@@ -20,15 +20,8 @@ You can install the development version of bis620.2022 from
 ``` r
  #install.packages("devtools")
 devtools::install_github("denise877/bis620.2022")
-#> Downloading GitHub repo denise877/bis620.2022@HEAD
-#> 
-#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/RtmpfYKZr0/remotes7fed6c00ba18/denise877-bis620.2022-eeecf48/DESCRIPTION’ ... OK
-#> * preparing ‘bis620.2022’:
-#> * checking DESCRIPTION meta-information ... OK
-#> * checking for LF line-endings in source and make files and shell scripts
-#> * checking for empty or unneeded directories
-#> * looking to see if a ‘data/datalist’ file should be added
-#> * building ‘bis620.2022_0.1.0.tar.gz’
+#> Skipping install of 'bis620.2022' from a github remote, the SHA1 (c813602c) has not changed since last install.
+#>   Use `force = TRUE` to force installation
 ```
 
 ## Example
@@ -60,7 +53,7 @@ spec_sig(ukb_accel[1:100, ])
 #> # … with 40 more rows
 
 #take_log indicates whether the log of the modulus be taken 
-spec_sig(ukb_accel[1:100, ], take_log = TRUE)
+spec_sig(ukb_accel[1:100, ], take_log = TRUE) 
 #> # A tibble: 50 × 4
 #>         X     Y      Z  freq
 #>     <dbl> <dbl>  <dbl> <dbl>

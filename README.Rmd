@@ -46,7 +46,7 @@ data("ukb_accel")
 spec_sig(ukb_accel[1:100, ])
 
 #take_log indicates whether the log of the modulus be taken 
-spec_sig(ukb_accel[1:100, ], take_log = TRUE)
+spec_sig(ukb_accel[1:100, ], take_log = TRUE) 
 
 #inverse indicates whether the unnormalized inverse transform is computed.
 spec_sig(ukb_accel[1:100, ], inverse = FALSE)
