@@ -36,7 +36,7 @@ devtools::install_github("denise877/bis620.2022")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(bis620.2022)
+library(bis620.2022) 
 ## basic example code
 
 #use data ukb_accel as an example

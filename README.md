@@ -20,8 +20,15 @@ You can install the development version of bis620.2022 from
 ``` r
  #install.packages("devtools")
 devtools::install_github("denise877/bis620.2022")
-#> Skipping install of 'bis620.2022' from a github remote, the SHA1 (c813602c) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo denise877/bis620.2022@HEAD
+#> 
+#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/Rtmp5qJXpM/remotes844d5d534db0/denise877-bis620.2022-b043df5/DESCRIPTION’ ... OK
+#> * preparing ‘bis620.2022’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * looking to see if a ‘data/datalist’ file should be added
+#> * building ‘bis620.2022_0.1.0.tar.gz’
 ```
 
 ## Example
@@ -29,7 +36,7 @@ devtools::install_github("denise877/bis620.2022")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(bis620.2022)
+library(bis620.2022) 
 ## basic example code
 
 #use data ukb_accel as an example
