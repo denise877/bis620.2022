@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/denise877/bis620.2022/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/denise877/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/denise877/bis620.2022?branch=main)
+[![lint](https://github.com/denise877/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/denise877/bis620.2022/actions/workflows/lint.yaml)
+[![test-coverage](https://github.com/denise877/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/denise877/bis620.2022/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of bis620.2022 is to …
@@ -22,7 +24,7 @@ You can install the development version of bis620.2022 from
 devtools::install_github("denise877/bis620.2022")
 #> Downloading GitHub repo denise877/bis620.2022@HEAD
 #> 
-#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/Rtmp5qJXpM/remotes844d5d534db0/denise877-bis620.2022-b043df5/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/zh/xnk_zk8j0xv3z_3vk5_4qrzh0000gn/T/RtmpzqJnyB/remotes8650bd43bba/denise877-bis620.2022-f72b03b/DESCRIPTION’ ... OK
 #> * preparing ‘bis620.2022’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
