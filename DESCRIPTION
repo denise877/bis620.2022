@@ -12,7 +12,9 @@ Imports:
   dplyr,
   ggplot2,
   purrr,
-  tidyr
+  tidyr,
+  haven,
+  gtsummary
 Roxygen: list(markdown = TRUE)
 Depends: 
   R (>= 4.2)
@@ -21,3 +23,4 @@ Suggests:
     testthat (>= 3.0.0),
     vdiffr
 Config/testthat/edition: 3
+LazyData: true
